@@ -6,7 +6,7 @@ module.exports = app => {
     app.post('/alugar', (req, res) =>{
         const carRental = req.body
 
-        CarRentalPerson.add(carRental)
-        res.send('Aluguel cadastrado')
+        CarRentalPerson.add(carRental, res)
+        //res.send('Aluguel cadastrado')
     })
 }

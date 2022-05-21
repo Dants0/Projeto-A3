@@ -6,7 +6,7 @@ class Tables{
     }
 
     createRental(){
-        const sql = 'CREATE TABLE IF NOT EXISTS Aluguel (id int NOT NULL AUTO_INCREMENT, nome varchar(50) NOT NULL, sobrenome varchar(20), cpf varchar(20) NOT NULL, rg varchar(20) NOT NULL, alugado date not null, entregue date not null, status varchar(20) NOT NULL, observacoes text, PRIMARY KEY(id))'
+        const sql = 'CREATE TABLE IF NOT EXISTS Aluguel (id int NOT NULL AUTO_INCREMENT, nome varchar(50) NOT NULL, sobrenome varchar(20), cpf varchar(20) NOT NULL, rg varchar(20) NOT NULL, alugado datetime not null, entregue datetime not null, status varchar(20) NOT NULL, observacoes text, PRIMARY KEY(id))'
     
             this.connection.query(sql, erro =>{
                 if(erro){
