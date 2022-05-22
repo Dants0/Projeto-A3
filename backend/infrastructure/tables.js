@@ -37,7 +37,7 @@ class Tables {
 
     this.connection.query(sql, (error) => {
       if (error) {
-        console.error(erro)
+        console.error(error)
         throw error
       } else {
         console.log('Tabela Aluguel Criada Com Sucesso')
@@ -45,7 +45,7 @@ class Tables {
     })
   }
 
-  async populateRental() {
+  populateRental() {
     const values = this.seeds
 
     const sql = `INSERT INTO Aluguel (nome, sobrenome, cpf, rg, alugado, entregue, status, observacoes) VALUES ?`
