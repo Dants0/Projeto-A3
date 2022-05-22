@@ -4,14 +4,13 @@ axios({
     method: 'post',
     url: 'http://localhost:3000/alugar',
     data: {
-        "nome": "test",
-        "sobrenome": "test",
-        "cpf": "test",
-        "rg": "test",
-        "alugado": "2002-07-15",
-        "entregue": "2002-08-28",
+        "nome": "Testando",
+        "sobrenome": "Walker",
+        "cpf": "000000000220",
+        "rg": "000330000",
+        "alugado": "2022/05/22",
         "status": "Entregue",
-        "observacoes":"é ele",
+        "observacoes":"é ele"
     },
     headers: {
         'Content-Type': 'application/json',
