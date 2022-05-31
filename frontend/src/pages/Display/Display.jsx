@@ -1,10 +1,9 @@
 import React from 'react'
+import RentDisplay from '../../components/RentDisplay/RentDisplay.jsx'
 
 const Display = () => {
   return (
-    <>
-        <h1>Display</h1>
-    </>
+    <RentDisplay></RentDisplay>
   )
 }
 

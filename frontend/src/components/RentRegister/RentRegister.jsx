@@ -1,16 +1,15 @@
 import React from 'react'
-import {ChatTeardrop, Check, FileSearch, User} from 'phosphor-react';
-import '../../styles/responsive.css'
-import './rentregister.scss';
+import {ChatTeardrop, Check, FileSearch, IdentificationCard, User} from 'phosphor-react';
+import styles from './styles.module.scss';
 
 const RentRegister = () => {
   return (
     <>
-        <div className="container">
-          <div className="header">
+        <div className={styles.container}>
+          <div className={styles.header}>
             <h1>Formulário de Registro</h1>
           </div>
-          <div className="box">
+          <div className={styles.box}>
             <form action="">
               <label htmlFor="">
                 <User size={20} color="white" /><input type="text" placeholder="Nome"/>
@@ -19,10 +18,10 @@ const RentRegister = () => {
                 <User size={20} color="white"/><input type="text" placeholder="Sobrenome"/>
               </label>
               <label htmlFor="">
-                <User size={20} color="white"/><input type="text" placeholder="CPF"/>
+                <IdentificationCard size={20} color="white"/><input type="text" placeholder="CPF"/>
               </label>
               <label htmlFor="">
-                <User size={20} color="white"/><input type="text" placeholder="RG"/>
+                <IdentificationCard size={20} color="white"/><input type="text" placeholder="RG"/>
               </label>
               <label htmlFor="">
                 <Check size={20} color="white"/><input type="text" placeholder="Status"/>
@@ -33,7 +32,7 @@ const RentRegister = () => {
               <label htmlFor="">
                 <FileSearch size={20} color="white"/><input type="file"/>
               </label>
-              <input type="submit" id='submitData' value='Cadastrar'/>
+              <input type="submit" id={styles.submitData} value='Cadastrar'/>
             </form>
           </div>
         </div>
