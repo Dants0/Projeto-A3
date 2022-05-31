@@ -1,11 +1,10 @@
 import React from 'react'
+import RentRegister from '../../components/RentRegister/RentRegister'
 
 const Register = () => {
   return (
     <>
-        <h1>Register</h1>
-
-
+        <RentRegister></RentRegister>
     </>
   )
 }
