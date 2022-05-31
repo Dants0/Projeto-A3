@@ -1,84 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.container {
+  display: flex;
+  flex-direction: column;
 
-:root{
-    --bg-page: #0E1218;
-    --bg-button: #ffffffb9;
-    --text-color: #F1F1F1;
+
+  justify-content: center;
+  width: 100%;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+  input {
+    width: 15rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+  }
+  input:focus {
+    outline: none;
+  }
+  input[type="file"] {
+    display: flex;
+    margin-top: 1rem;
+    color: var(--text-color);
+  }
+
+  textarea {
+    display: flex;
+    height: 5rem;
+    width: 15.2rem;
+    resize: none;
+    padding: 0.2rem;
+    margin-top: 1rem;
+    outline: none;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    margin: 2rem 0rem 2rem 0rem;
+  }
+  .box {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    border: 1px solid gray;
+    width: 30rem;
+    height: 40rem;
+    border-radius: 0.3rem;
+    box-shadow: 0px 0px 5px 0px #fff;
+  }
+  #submitData {
+    display: flex;
+    width: 15rem;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  #submitData:hover {
+    background-color: var(--bg-button);
+  }
 }
-
-body{
-    background-color: var(--bg-page);
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    .container{
-        display: flex;
-        flex-direction: column;
-        form{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        label{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 4rem;
-            margin-bottom: 1rem;
-        }
-        input{
-            width: 15rem;
-            height: 2rem;
-            align-items: center;
-            justify-content: center;
-            padding: 0.2rem;
-            border-radius: 0.3rem;
-        }
-        input:focus{
-            outline: none;
-        }
-        input[type="file"]{
-            display: flex;
-            margin-top: 1rem;
-            color: var(--text-color);
-        }
-
-        textarea{
-            display: flex;
-            height: 5rem;
-            width: 15.2rem;
-            resize: none;
-            padding: 0.2rem;
-            margin-top: 1rem;
-            outline: none;
-        }
-        .header{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-color);
-            margin: 2rem 0rem 2rem 0rem;
-        }
-        .box{
-            display: flex;
-            align-self: center;
-            justify-content: center;
-            border: 1px solid gray;
-            width: 30rem;
-            height: 40rem;
-            border-radius: 0.3rem;
-            box-shadow: 0px 0px 5px 0px #fff;
-        }
-        #submitData{
-            display: flex;
-            width: 15rem;
-            justify-content: center;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 18px
-        }
-        #submitData:hover{
-            background-color: var(--bg-button);
-        }
-    }
-}
-

@@ -1,11 +1,13 @@
 import React from 'react'
-import Home from './pages/Home/Home'
+import Home from './pages/Home'
+import styles from './styles/global.scss'
+import { Routes } from './Routes'
+import pixelToRem from './utils/pxToRem'
 
 const App = () => {
   return (
     <>
-      <Home></Home>
-    
+      <Routes></Routes>
     </>
   )
 }

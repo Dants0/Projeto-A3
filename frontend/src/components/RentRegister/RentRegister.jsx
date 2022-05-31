@@ -1,6 +1,5 @@
 import React from 'react'
 import {ChatTeardrop, Check, FileSearch, User} from 'phosphor-react';
-import '../../styles/responsive.css'
 import './rentregister.scss';
 
 const RentRegister = () => {

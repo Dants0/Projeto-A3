@@ -1,15 +1,16 @@
 import React from 'react'
 import Register from '../Register/Register'
+import { Dashboard } from '../../components/Dashboard/Dashboard'
 import Display from '../Display/Display'
-
-import '../../styles/responsive.css'
-
 
 const Home = () => {
   return (
     <>
-        <Register></Register>
-        {/* <Dashboard></Dashboard> */}
+        <div className="dashboard-container">
+        <Dashboard></Dashboard>
+          <Register></Register>
+          
+        </div>
         {/* <Register></Register>
         <Display></Display> */}
     </>
