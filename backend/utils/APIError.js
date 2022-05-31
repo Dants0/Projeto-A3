@@ -1,4 +1,4 @@
-export class APIError {
+class APIError {
   constructor(code, message, reasons) {
     this.code = code
     this.message = message
@@ -25,3 +25,5 @@ export class APIError {
     return new APIError(500, 'Internal error')
   }
 }
+
+module.exports = APIError
