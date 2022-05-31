@@ -1,11 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
 import {ChatTeardrop, Check, FileSearch, IdentificationCard, User} from 'phosphor-react';
 import styles from './styles.module.scss';
-=======
-import {ChatTeardrop, Check, FileSearch, User} from 'phosphor-react';
-import './rentregister.scss';
->>>>>>> f308d4a1ef5fff8635b4bb09b97fadb5cfa30929
 
 const RentRegister = () => {
   return (
