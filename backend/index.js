@@ -10,6 +10,6 @@ connection.connect((erro) => {
 
     Tables.init(connection)
 
-    app().listen(3000, () => console.log('servidor rodando na porta 3000'))
+    app().listen(3001, () => console.log('servidor rodando na porta 3001'))
   }
 })
