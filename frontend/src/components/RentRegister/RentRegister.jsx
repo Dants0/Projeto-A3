@@ -1,5 +1,5 @@
 import React from 'react'
-import {ChartBar, ChatTeardrop, FileSearch, User} from 'phosphor-react';
+import {ChatTeardrop, Check, FileSearch, User} from 'phosphor-react';
 import '../../styles/responsive.css'
 import './rentregister.scss';
 
@@ -25,7 +25,7 @@ const RentRegister = () => {
                 <User size={20} color="white"/><input type="text" placeholder="RG"/>
               </label>
               <label htmlFor="">
-                <ChartBar size={20} color="white"/><input type="text" placeholder="Status"/>
+                <Check size={20} color="white"/><input type="text" placeholder="Status"/>
               </label>
               <label htmlFor="">
                 <ChatTeardrop size={20} color="white"/><textarea placeholder="Observações"></textarea>
@@ -33,7 +33,7 @@ const RentRegister = () => {
               <label htmlFor="">
                 <FileSearch size={20} color="white"/><input type="file"/>
               </label>
-              <input type="submit" id='submitData'/>
+              <input type="submit" id='submitData' value='Cadastrar'/>
             </form>
           </div>
         </div>
