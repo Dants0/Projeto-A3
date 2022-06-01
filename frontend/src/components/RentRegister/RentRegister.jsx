@@ -9,7 +9,6 @@ const RentRegister = () => {
   const {register, handleSubmit} = useForm();
   // const onSubmit = (d) => alert(JSON.stringify(d));
   const onSubmit = (d) => console.log(d);
-  let counter = 0;
 
 
   return (
@@ -41,7 +40,6 @@ const RentRegister = () => {
               <label htmlFor="" id='importFile'>
                 <FileSearch size={20} color="white"/><input type="file"/>
               </label>
-              <p>Render: <span>{counter++}</span> </p>
               <input type="submit" id={styles.submitData} value='Cadastrar'/>
             </form>
           </div>
