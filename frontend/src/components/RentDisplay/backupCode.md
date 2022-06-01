@@ -21,6 +21,7 @@ const RentDisplay = () => {
         <div className={styles.rentDisplayContainer}>
           <h1>{car.message}</h1>
         </div>
+        {/* <p>{car.nome}</p> */}
     </>
   )
 }
