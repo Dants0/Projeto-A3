@@ -5,6 +5,7 @@
     --bg-button: #ffffffb9;
     --text-color: #F1F1F1;
     --left-section-color: #2F2F2F;
+    --primary: #81B29A;
 }
 
 * {
@@ -15,7 +16,7 @@
 }
 
 body {
-    background-color: var(--bg-page);
+    background-color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }

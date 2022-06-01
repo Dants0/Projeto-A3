@@ -28,10 +28,9 @@ const RentRegister = () => {
 })
 
   return (
-    <>
         <div className={styles.container}>
           <div className={styles.header}>
-            <h1>Formulário de Registro</h1>
+            <h1>Formulário de Registro  &nbsp; &nbsp; </h1>
           </div>
           <div className={styles.box}>
             <form onSubmit={formik.handleSubmit}>
@@ -138,7 +137,6 @@ const RentRegister = () => {
             </form>
           </div>
         </div>
-    </>
   )
 }
 

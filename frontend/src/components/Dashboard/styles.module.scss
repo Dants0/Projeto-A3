@@ -28,14 +28,17 @@
           display: flex;
           align-items: center;
           
-          width: 221px;
-          height: 42px;
+          width: 200px;
+          height: 36px;
           
           border-radius: 5px;
-          background-color: #81B29A;
+          background-color: var(--primary);
 
-          &:first-child {
-              
+          cursor: pointer;
+          transition: ease-in-out .5s;
+
+          svg {
+              margin-left: 16px;
           }
 
           p {
@@ -44,7 +47,12 @@
               
           }
 
+          &:hover {
+              filter: brightness(80%);
+          }
       }
+
+     
 
     
    }
