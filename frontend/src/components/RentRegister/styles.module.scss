@@ -31,9 +31,17 @@
 
     label {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      
+      align-items: flex-start;
+      flex-direction: column;
       height: 4rem;
+      font-size: 12px;
+
+      span {
+        margin-top: 6px;
+        font-weight: 600;
+        color: #e74141;
+      }
     }
     label[id="importFile"] {
       display: flex;

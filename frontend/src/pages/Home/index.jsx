@@ -1,5 +1,5 @@
 import React from 'react'
-import Register from '../Register/Register'
+import Register  from '../Register/Register'
 import Display from '../Display/Display'
 import { Dashboard } from '../../components/Dashboard/Dashboard'
 
