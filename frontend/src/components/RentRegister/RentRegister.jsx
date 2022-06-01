@@ -1,5 +1,4 @@
 import React from 'react'
-import { useForm } from 'react-hook-form';
 import {ChatTeardrop, Check, FileSearch, IdentificationCard, User} from 'phosphor-react';
 import styles from './styles.module.scss';
 import { useFormik } from "formik";
