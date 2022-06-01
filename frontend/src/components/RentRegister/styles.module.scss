@@ -12,7 +12,17 @@
             justify-content: center;
             align-items: center;
             height: 4rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        label[id=importFile]{
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            margin-top: 0.75rem;
+            svg{
+                display: flex;
+                margin-top: 0.75rem;
+            }
         }
         input{
             width: 15rem;
@@ -29,11 +39,11 @@
             display: flex;
             margin-top: 1rem;
             color: var(--text-color);
+            cursor: pointer;
         }
-
         textarea{
             display: flex;
-            height: 5rem;
+            height: 7rem;
             width: 15.2rem;
             resize: none;
             padding: 0.2rem;
