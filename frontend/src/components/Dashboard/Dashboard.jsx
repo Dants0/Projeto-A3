@@ -11,15 +11,15 @@ export function Dashboard  () {
 
             <div className={styles.dashboardMenu}>
                 <div>
-                  <Car size={24} color="black" margin-left="16px"/>
+                  <Car size={24}  color="black" weight="duotone"/>
                   <p> Home </p>
                 </div>
                 <div>
-                  <IdentificationCard size={24} color="black"/>
+                  <IdentificationCard size={24} weight="duotone" marginLeft="16px" color="black"/>
                   <p> Cadastrar carros </p>
                 </div>
                 <div>
-                  <ListBullets size={24} color="black"/>
+                  <ListBullets size={24} weight="duotone" color="black"/>
                   <p> Listar carros </p>
                 </div>
             </div>
