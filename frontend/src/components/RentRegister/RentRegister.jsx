@@ -40,7 +40,7 @@ import * as yup from "yup";
         <h1>Formulário de Registro</h1>
       </div>
       <div className={styles.box}>
-        <form onSubmit={formik.handleSubmit}>
+        <form onSubmit={formik.handleSubmit} >
           <label htmlFor="nome">
             <User size={20} color="white" />
             <input 
