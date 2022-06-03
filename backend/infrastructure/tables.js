@@ -1,13 +1,17 @@
+const moment = require('moment');
+
 class Tables {
   seeds = Array.from({ length: 10 }, (_, i) => {
+    const oldDateObj = new Date().toISOString().slice(0, 19).replace('T', ' ');
+    const newDateObj = moment(oldDateObj).add(60, 'hours').toDate();
     const randomValue = (Math.random() * 100000).toFixed()
     return [
       'nome ' + randomValue,
       'sobrenome ' + randomValue,
       randomValue,
       randomValue,
-      new Date().toISOString().slice(0, 19).replace('T', ' '),
-      new Date().toISOString().slice(0, 19).replace('T', ' '),
+      oldDateObj,
+      newDateObj,
       'alugado ',
       'observacao ' + randomValue,
     ]
