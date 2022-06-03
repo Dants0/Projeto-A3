@@ -1,19 +1,14 @@
 import React from 'react'
-import Register  from '../Register/Register'
-import Display from '../Display/Display'
+import Register  from '../Register'
+import Display from '../Display'
 import { Dashboard } from '../../components/Dashboard/Dashboard'
 
 const Home = () => {
   return (
     <>
         <div className="dashboard-container">
-        <Dashboard></Dashboard>
-          <Register></Register>
-          <Display></Display>
+          <Dashboard/>
         </div>
-
-        {/* <Register></Register>
-        <Display></Display> */}
     </>
   )
 }

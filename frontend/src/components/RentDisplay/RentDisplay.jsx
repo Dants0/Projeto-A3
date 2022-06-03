@@ -17,12 +17,12 @@ const RentDisplay = () => {
     }, []);
     
     if(!car) return null;
-    if(!response) return null;
+    // if(!response) return null;
 
   return (
     <>
         <div className={styles.rentDisplayContainer}>
-          <h1>{response.message}</h1>
+          {/* <h1>{data.message}</h1> */}
           {/* <h1>{car.nome}</h1> */}
         </div>
     </>

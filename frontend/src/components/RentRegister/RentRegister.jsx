@@ -4,9 +4,6 @@ import styles from './styles.module.scss';
 import { useFormik } from "formik";
 import * as yup from "yup";
 
-
-
-
   const RentRegister = () => {
     const formik = useFormik({
       initialValues:{

@@ -1,10 +1,14 @@
 import React from 'react'
+import { Dashboard } from '../../components/Dashboard/Dashboard'
 import RentRegister  from '../../components/RentRegister/RentRegister'
 
 const Register = () => {
   return (
     <>
-        <RentRegister></RentRegister>
+        <div className="dashboard-container">
+        <Dashboard/>
+        <RentRegister/>
+        </div>
     </>
   )
 }

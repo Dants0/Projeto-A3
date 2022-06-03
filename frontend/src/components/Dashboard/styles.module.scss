@@ -1,7 +1,8 @@
 
 .leftSection {
     background: var(--left-section-color);
-    width: 310px;
+    width: 19.375rem;
+    min-width: 19.375rem;
     height: 100vh;
 
     display: flex;
@@ -23,10 +24,14 @@
    .dashboardMenu {
        margin-top: 24px;
 
-      & > div {
+       
+
+      & > a {
           margin-top: 24px;
           display: flex;
           align-items: center;
+
+          text-decoration: none;
           
           width: 200px;
           height: 36px;
@@ -50,6 +55,10 @@
           &:hover {
               filter: brightness(80%);
           }
+
+          &:visited {
+            color: black;
+        }
       }
 
      
