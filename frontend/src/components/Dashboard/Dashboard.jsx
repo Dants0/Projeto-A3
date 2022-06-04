@@ -19,7 +19,7 @@ export function Dashboard  () {
                 </Link>
                 <Link to="/Register">
                
-                  <IdentificationCard size={24} weight="duotone" marginLeft="16px" color="black"/>
+                  <IdentificationCard size={24} weight="duotone" color="black"/>
                   <p> Cadastrar carros </p>
                
                 </Link>

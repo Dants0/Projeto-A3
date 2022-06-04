@@ -24,11 +24,11 @@ class CarRentalPerson {
 
   async add(aluguel) {
     const entregue = moment().format('YYYY-MM-DD HH:mm:ss')
-    const alugado = moment(aluguel.alugado, 'YYYY-MM-DD').format(
+    const alugado = moment(aluguel.alugado, 'DD-MM-YYYY').format(
       'YYYY-MM-DD HH:mm:ss'
     )
 
-    const dataEhValida = moment(alugado).isSameOrAfter(entregue)
+    const dataEhValida = moment(entregue).isSameOrAfter(alugado)
     const nomeEhValido = aluguel.nome.length >= 5
 
     const validacoes = [
@@ -41,7 +41,7 @@ class CarRentalPerson {
         nome: 'nome',
         valido: nomeEhValido,
         mensagem: 'Cliente deve ter pelo menos cinco caracteres',
-      },
+      }
     ]
 
     const erros = validacoes.filter((campo) => !campo.valido)
@@ -50,7 +50,7 @@ class CarRentalPerson {
     if (existemErros) {
       throw APIError.WrongParams('Erro ao validar dados', erros)
     }
-    const aluguelDatado = { ...aluguel, entregue, alugado }
+    const aluguelDatado = { ...aluguel, entregue, alugado}
 
     const sql = 'INSERT INTO Aluguel SET ?'
 

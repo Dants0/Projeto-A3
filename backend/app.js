@@ -6,7 +6,7 @@ module.exports = () => {
     const app = express()
 
     app.use(cors({
-        url: 'http://localhost:3001/alugar'
+        url: 'http://localhost:3001/carros'
     }))
 
     app.use(express.urlencoded({extended: true}))
