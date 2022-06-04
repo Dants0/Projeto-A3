@@ -10,7 +10,7 @@ const baseUrl = 'http://localhost:3001/aluguel/carros'
 
 
 const RentRegister = () => {
-  const [selectedFile, setSelectedFile] = useState("Imagem Enviada")
+  const [selectedFile, setSelectedFile] = useState(null)
 
   const formik = useFormik({
     initialValues: {
@@ -20,16 +20,15 @@ const RentRegister = () => {
       rg: '',
       status: '',
       observacoes: '',
-      imagem: selectedFile
     },
 
     validationSchema: yup.object({
-      nome: yup.string().required('Esse campo é obrigatório').matches(/^[aA-zZ\s]+$/, "Só é permitido letras"),
-      sobrenome: yup.string().required('Esse campo é obrigatório').matches(/^[aA-zZ\s]+$/, "Só é permitido letras"),
+      nome: yup.string().required('Esse campo é obrigatório').matches(/^[aA-zZ\s]+$/, "Só é permitido letras").min(5, 'Nome curto demais').max(100, 'Nome curto demais'),
+      sobrenome: yup.string().required('Esse campo é obrigatório').matches(/^[aA-zZ\s]+$/, "Só é permitido letras").min(5, 'Sobrenome curto demais').max(100, 'Sobrenome curto demais'),
       cpf: yup.string().required('Esse campo é obrigatório').matches(/^[0-9]+$/, "Só é permitido número").min(11, 'CPF inválido').max(11, 'CPF inválido'),
       rg: yup.string().required('Esse campo é obrigatório').matches(/^[0-9]+$/, "Só é permitido número").min(9, 'RG inválido').max(9, 'RG inválido'),
       status: yup.string().required('Esse campo é obrigatório'),
-      observacoes: yup.string().required('Esse campo é obrigatório')
+      observacoes: yup.string().required('Esse campo é obrigatório'),
     }),
 
     onSubmit: (values) => {
