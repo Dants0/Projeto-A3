@@ -42,7 +42,9 @@ module.exports = (app) => {
       const carRental = req.body
 
       if (!req.file) {
-        return res.json({ message: 'put a valid file' })
+        return res
+          .status(400)
+          .json({ code: 400, message: 'Por favor coloque uma imagem válida' })
       }
 
       const carroAdicionado = CarRentalPerson.add(carRental, req.file.filename)
