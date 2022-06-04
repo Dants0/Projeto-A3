@@ -4,6 +4,7 @@ import React, {useEffect, useState} from "react";
 
 
 const baseURL = "http://localhost:3001/aluguel/carros";
+const imageURL = "http://localhost:3001/images/";
 
 const RentDisplay = () => {
 
@@ -31,6 +32,7 @@ const RentDisplay = () => {
           <h3>{item.rg}</h3>
           <h3>{item.status}</h3>
           <h3>{item.observacoes}</h3>
+          <img src={imageURL+item.imagem} alt="" />
         </>
           )
           }
