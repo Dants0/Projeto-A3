@@ -15,7 +15,7 @@ class Tables {
       faker.random.numeric(9), // rg
       dataAluguel, // alugado
       dataEntrega, // entregue
-      'alugado ', // status
+      'entregue ', // status
       faker.lorem.lines(), // observacoes
       defaultImage,
     ]
