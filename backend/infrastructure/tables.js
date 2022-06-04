@@ -3,6 +3,7 @@ const { faker } = require('@faker-js/faker')
 
 class Tables {
   seeds = Array.from({ length: 10 }, (_, i) => {
+    const defaultImage = 'carro1.png'
     const dataAluguel = moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
     const dataEntrega = moment(dataAluguel)
       .add(10, 'days')
@@ -16,6 +17,7 @@ class Tables {
       dataEntrega, // entregue
       'alugado ', // status
       faker.lorem.lines(), // observacoes
+      defaultImage,
     ]
   })
 
@@ -39,6 +41,7 @@ class Tables {
             entregue datetime not null, 
             status varchar(20) NOT NULL, 
             observacoes text, 
+            imagem varchar(50) NOT NULL, 
             PRIMARY KEY(id)
         )`
 
@@ -68,7 +71,7 @@ class Tables {
   populateRental() {
     const values = this.seeds
 
-    const sql = `INSERT INTO Aluguel (nome, sobrenome, cpf, rg, alugado, entregue, status, observacoes) VALUES ?`
+    const sql = `INSERT INTO Aluguel (nome, sobrenome, cpf, rg, alugado, entregue, status, observacoes, imagem) VALUES ?`
 
     this.connection.query(sql, [values], (error) => {
       if (error) {

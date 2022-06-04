@@ -22,7 +22,7 @@ class CarRentalPerson {
     return results[0]
   }
 
-  async add(aluguel) {
+  async add(aluguel, imagePath) {
     const entregue = moment().format('YYYY-MM-DD HH:mm:ss')
     const alugado = moment(aluguel.alugado, 'DD-MM-YYYY').format(
       'YYYY-MM-DD HH:mm:ss'
@@ -41,7 +41,7 @@ class CarRentalPerson {
         nome: 'nome',
         valido: nomeEhValido,
         mensagem: 'Cliente deve ter pelo menos cinco caracteres',
-      }
+      },
     ]
 
     const erros = validacoes.filter((campo) => !campo.valido)
@@ -50,7 +50,7 @@ class CarRentalPerson {
     if (existemErros) {
       throw APIError.WrongParams('Erro ao validar dados', erros)
     }
-    const aluguelDatado = { ...aluguel, entregue, alugado}
+    const aluguelDatado = { ...aluguel, entregue, alugado, imagem: imagePath }
 
     const sql = 'INSERT INTO Aluguel SET ?'
 

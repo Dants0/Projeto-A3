@@ -1,5 +1,10 @@
 const CarRentalPerson = require('../models/carRentalPerson')
+const { imageUpload } = require('../middlewares/upload')
 
+/**
+ *
+ * @param {import('express').Application} app
+ */
 module.exports = (app) => {
   app.head('/alugar', (_, res) => res.send('Você está acessando alugar'))
 
@@ -32,11 +37,16 @@ module.exports = (app) => {
     }
   })
 
-  app.post('/aluguel/carros', async (req, res) => {
+  app.post('/aluguel/carros', imageUpload.single('image'), async (req, res) => {
     try {
       const carRental = req.body
 
-      const carroAdicionado = CarRentalPerson.add(carRental)
+      if (!req.file) {
+        return res.json({ message: 'put a valid file' })
+      }
+
+      const carroAdicionado = CarRentalPerson.add(carRental, req.file.filename)
+
       res.status(201).json({
         code: 201,
         message: 'Aluguel adicionado com sucesso',
