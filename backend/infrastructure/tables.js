@@ -1,19 +1,21 @@
-const moment = require('moment');
+const moment = require('moment')
+const { faker } = require('@faker-js/faker')
 
 class Tables {
   seeds = Array.from({ length: 10 }, (_, i) => {
-    const oldDateObj = new Date().toISOString().slice(0, 19).replace('T', ' ');
-    const newDateObj = moment(oldDateObj).add(60, 'hours').toDate();
-    const randomValue = (Math.random() * 100000).toFixed()
+    const dataAluguel = moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
+    const dataEntrega = moment(dataAluguel)
+      .add(10, 'days')
+      .format('YYYY-MM-DD HH:mm:ss')
     return [
-      'nome ' + randomValue,
-      'sobrenome ' + randomValue,
-      randomValue,
-      randomValue,
-      oldDateObj,
-      newDateObj,
-      'alugado ',
-      'observacao ' + randomValue,
+      faker.name.firstName(), // nome
+      faker.name.lastName(), // sobrenome
+      faker.random.numeric(11), // cpf
+      faker.random.numeric(9), // rg
+      dataAluguel, // alugado
+      dataEntrega, // entregue
+      'alugado ', // status
+      faker.lorem.lines(), // observacoes
     ]
   })
 
@@ -21,6 +23,7 @@ class Tables {
     this.connection = connection
 
     this.createRental()
+    this.truncateTable()
     this.populateRental()
   }
 
@@ -45,6 +48,19 @@ class Tables {
         throw error
       } else {
         console.log('Tabela Aluguel Criada Com Sucesso')
+      }
+    })
+  }
+
+  truncateTable() {
+    const sql = `TRUNCATE TABLE Aluguel`
+
+    this.connection.query(sql, (error) => {
+      if (error) {
+        console.error(error)
+        throw error
+      } else {
+        console.log('Dados da Tabela limpos com sucesso')
       }
     })
   }
