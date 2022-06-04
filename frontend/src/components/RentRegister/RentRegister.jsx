@@ -10,6 +10,8 @@ const baseUrl = 'http://localhost:3001/aluguel/carros'
 
 
 const RentRegister = () => {
+  const [selectedFile, setSelectedFile] = useState("Imagem Enviada")
+
   const formik = useFormik({
     initialValues: {
       nome: '',
@@ -17,7 +19,8 @@ const RentRegister = () => {
       cpf: '',
       rg: '',
       status: '',
-      observacoes: ''
+      observacoes: '',
+      imagem: selectedFile
     },
 
     validationSchema: yup.object({
@@ -58,7 +61,7 @@ const RentRegister = () => {
   })
 
 
-  const [selectedFile, setSelectedFile] = useState(null)
+
 
   return (
     <>
