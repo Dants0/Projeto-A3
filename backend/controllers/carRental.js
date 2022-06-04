@@ -37,28 +37,35 @@ module.exports = (app) => {
     }
   })
 
-  app.post('/aluguel/carros', imageUpload.single('image'), async (req, res) => {
-    try {
-      const carRental = req.body
+  app.post(
+    '/aluguel/carros',
+    imageUpload.single('imagem'),
+    async (req, res) => {
+      try {
+        const carRental = req.body
 
-      if (!req.file) {
-        return res
-          .status(400)
-          .json({ code: 400, message: 'Por favor coloque uma imagem válida' })
+        if (!req.file) {
+          return res
+            .status(400)
+            .json({ code: 400, message: 'Por favor coloque uma imagem válida' })
+        }
+
+        const carroAdicionado = CarRentalPerson.add(
+          carRental,
+          req.file.filename
+        )
+
+        res.status(201).json({
+          code: 201,
+          message: 'Aluguel adicionado com sucesso',
+          data: carroAdicionado,
+        })
+      } catch (error) {
+        const { code = 500, message = 'Internal Error', reasons = [] } = error
+        res.status(code).json({ code, message, reasons })
       }
-
-      const carroAdicionado = CarRentalPerson.add(carRental, req.file.filename)
-
-      res.status(201).json({
-        code: 201,
-        message: 'Aluguel adicionado com sucesso',
-        data: carroAdicionado,
-      })
-    } catch (error) {
-      const { code = 500, message = 'Internal Error', reasons = [] } = error
-      res.status(code).json({ code, message, reasons })
     }
-  })
+  )
 
   app.delete('/aluguel/carros/:id', async (req, res) => {
     try {
