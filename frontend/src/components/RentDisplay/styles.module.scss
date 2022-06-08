@@ -16,7 +16,7 @@
             text-align: start;
             margin-bottom: auto;
         }
-        margin: 0.25rem;
+        // margin: 0.25rem;
         background-color: var(--bg-card);
         float:left;
         width: 40%;
@@ -79,7 +79,7 @@
     }
     }
 
-    @media screen and (max-width:1386px) {
+    @media screen and (max-width:1115px) {
     .container{
         .cards, .card{
             h1,h2,h3{
