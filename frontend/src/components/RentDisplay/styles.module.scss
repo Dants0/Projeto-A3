@@ -57,3 +57,29 @@
     }
     }
 
+    @media only screen and (max-width: 768px) {
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            .cards, .card{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                h1,h2,h3{
+                    font-size: 1.25rem;
+                }
+                    img{
+                        display: flex;
+                        justify-content: center;
+                        align-self: center;
+                        flex-direction: column;
+                        align-self:center;
+                        width: 100%;
+                    }
+            }
+        }
+    }
+
+
