@@ -20,6 +20,7 @@ body {
     background-color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    height: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -27,6 +28,7 @@ body {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        height: 100%;
     }
 }
 
@@ -37,4 +39,5 @@ body {
 
 .dashboard-container {
     display: flex;
+    height: 100%;
 }

@@ -11,6 +11,18 @@ const RentDisplay = () => {
 
   const [car, setCar] = useState([]) //pegando array de carros
 
+  const [modal, setModal] = useState(false)
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  if(modal){
+    document.body.classList.add('active-modal')
+  }else{
+    document.body.classList.remove('active-modal')
+  }
+
   //method get
   useEffect(() => {
     axios.get(baseURL)
@@ -41,9 +53,16 @@ const RentDisplay = () => {
                 <div className={styles.cards}>
                   <div className={styles.controllButtons}>
                     <span><button onClick={(e)=>postDelete(item.id, e)}><Trash size={20} />Deletar</button></span>
-                    <span><button><Pencil size={20} />Alterar</button></span>
+                    <span><button onClick={toggleModal}><Pencil size={20} />Alterar</button></span>
+                    {modal&&(
+                    <>
+                      <h2>Alterar Nome</h2>
+                      <input type="text"/>
+                    </>
+                    )}
+                  
                   </div>
-                  <img src={imageURL + item.imagem} alt="Foto Da Api" />
+                  <img src={imageURL + item.imagem} alt="Foto Da Api"/>
                   <h1>{"Nome: " + item.nome}</h1>
                   <h2>{"Sobrenome: " + item.sobrenome}</h2>
                   <h3>{"CPF: " + item.cpf}</h3>
