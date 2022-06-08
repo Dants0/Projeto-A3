@@ -11,8 +11,6 @@ const RentDisplay = () => {
 
   const [car, setCar] = useState([]) //pegando array de carros
 
-  const [status, setStatus] = useState([]) //metodo delete card carros
-
   //method get
   useEffect(() => {
     axios.get(baseURL)
