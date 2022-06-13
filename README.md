@@ -14,7 +14,7 @@ Projeto feito para simular a interação entre o backend e frontend de uma locad
 <p> 
  <img src="https://img.shields.io/static/v1?label=&message=Reactjs&color=%2332323240&style=for-the-badge&logo=React" alt="Reactjs">
   <img src="https://img.shields.io/static/v1?label=&message=SCSS&color=%2332323240&style=for-the-badge&logo=sass" alt="scss">
- <img src="https://img.shields.io/static/v1?label=&message=Yarn&color=%2332323240&style=for-the-badge&logo=NPM" alt="NPM">
+ <img src="https://img.shields.io/static/v1?label=&message=npm&color=%2332323240&style=for-the-badge&logo=NPM" alt="NPM">
   <img src="https://img.shields.io/static/v1?label=&message=React+Router&color=%2332323240&style=for-the-badge&logo=React+Router" alt="React Router"></a>
 </p>
 
