@@ -27,7 +27,7 @@ const RentRegister = () => {
       sobrenome: yup.string().required('Esse campo é obrigatório').matches(/^[aA-zZ\s]+$/, "Só é permitido letras").min(5, 'Sobrenome curto demais').max(100, 'Sobrenome curto demais'),
       cpf: yup.string().required('Esse campo é obrigatório').matches(/^[0-9]+$/, "Só é permitido número").min(11, 'CPF inválido').max(11, 'CPF inválido'),
       rg: yup.string().required('Esse campo é obrigatório').matches(/^[0-9]+$/, "Só é permitido número").min(9, 'RG inválido').max(9, 'RG inválido'),
-      status: yup.string().required('Esse campo é obrigatório'),
+      status: yup.string().required('Esse campo é obrigatório').matches(/^[aA-zZ\s]+$/, "Só é permitido letras"),
       observacoes: yup.string().required('Esse campo é obrigatório'),
     }),
 
